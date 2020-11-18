@@ -1,0 +1,9 @@
+> 关于tsconfig.json的配置，以及tsc的常用命令
+## 常用的tsconfig.json的配置
+别人整理好的配置：https://segmentfault.com/a/1190000021749847
+
+## 常用的tsc命令
+`-w`
+`--init`
+`-h`
+
