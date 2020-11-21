@@ -6,7 +6,7 @@
 `React.ReactElement<T>`
 
 3. Class
-```
+```typescript
 class k {
   _privateParam: string;
   a() {
@@ -19,7 +19,7 @@ class k {
 思考 - 从Class到泛型的思考
 1. 使用React的Class类型，对应的联想到了HTMLElement等类型。类似于Component<Props,State> 这种类型是如何实现的。
 利用泛型这种‘可自定义’的类型。例如RaxElement最简单的写法就是这样的，定义了泛型P和泛型T作为对象中的props和type的类型
-```
+```typescript
   interface RaxElement<
     P = any,
     T extends string | JSXElementConstructor<any> = string | JSXElementConstructor<any>
@@ -30,7 +30,7 @@ class k {
   }
 ```
 又例如我们用得最多的Rax.Component的写法，按照React的定义把Props、State和Compoent中的生命周期关联在了一起。
-```
+```typescript
 interface Component<P = {}, S = {}, SS = any> extends ComponentLifecycle<P, S, SS> {}
 interface ComponentLifecycle<P, S, SS = any> {
     componentDidMount?(): void;
